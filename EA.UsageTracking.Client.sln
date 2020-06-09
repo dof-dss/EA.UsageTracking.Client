@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EA.Usage.Tracking.Client", "EA.Usage.Tracking.Client\EA.Usage.Tracking.Client.csproj", "{173A3F11-DA80-4BC3-9F96-DC13A3588012}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EA.Usage.Tracking.Client.Test", "EA.Usage.Tracking.Client.Test\EA.Usage.Tracking.Client.Test.csproj", "{E624199A-0480-490A-A474-C87C46C6D3F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EA.Usage.Tracking.Client.Test", "EA.Usage.Tracking.Client.Test\EA.Usage.Tracking.Client.Test.csproj", "{A9EC9E92-EF35-4063-9656-BD5180717420}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{173A3F11-DA80-4BC3-9F96-DC13A3588012}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{173A3F11-DA80-4BC3-9F96-DC13A3588012}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{173A3F11-DA80-4BC3-9F96-DC13A3588012}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E624199A-0480-490A-A474-C87C46C6D3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E624199A-0480-490A-A474-C87C46C6D3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E624199A-0480-490A-A474-C87C46C6D3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E624199A-0480-490A-A474-C87C46C6D3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9EC9E92-EF35-4063-9656-BD5180717420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9EC9E92-EF35-4063-9656-BD5180717420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9EC9E92-EF35-4063-9656-BD5180717420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9EC9E92-EF35-4063-9656-BD5180717420}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

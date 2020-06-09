@@ -12,6 +12,7 @@ namespace EA.Usage.Tracking.Client
     public interface IUsageTrackingClient
     {
         Task Post(string idToken, int eventId);
+        Task<PagedResponse<UsageTrackingEvent>> GetEvents();
     }
 
     public class UsageTrackingClient : IUsageTrackingClient
@@ -32,6 +33,18 @@ namespace EA.Usage.Tracking.Client
             var payload = new {ApplicationEventId = eventId, IdentityToken = idToken};
             var response = await _httpClient.PostAsync("ApplicationUsage", 
                 new StringContent(JsonConvert.SerializeObject(payload), Encoding.UTF8, "application/json"));
+        }
+
+        public async Task<PagedResponse<UsageTrackingEvent>> GetEvents()
+        {
+            _httpClient.DefaultRequestHeaders.Authorization = await _authClient.GetAuthenticationHeader();
+            var response = await _httpClient.GetAsync("ApplicationEvent");
+
+            return response.IsSuccessStatusCode
+                ? JsonConvert.DeserializeObject<PagedResponse<UsageTrackingEvent>>(
+                    await response.Content.ReadAsStringAsync())
+                : new PagedResponse<UsageTrackingEvent>();
+
         }
     }
 }
