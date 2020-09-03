@@ -26,10 +26,13 @@ namespace EA.Usage.Tracking.Client
 
             services.ConfigureCognitoForApp();
 
-            services.AddHttpClient("usageTracking", c =>
+            var httpClientBuilder = services.AddHttpClient("usageTracking", c =>
             {
                 c.BaseAddress = new Uri(usageTrackingSettings.BaseAddress);
             });
+
+            if(usageTrackingOptions.HttpClientHandler != null)
+                httpClientBuilder.ConfigurePrimaryHttpMessageHandler(() => usageTrackingOptions.HttpClientHandler); ;
 
             services.AddScoped<IUsageTrackingClient, UsageTrackingClient>();
         }
